@@ -1,9 +1,6 @@
-# Spring PetClinic Sample Application [![Build Status](https://travis-ci.org/spring-projects/spring-petclinic.png?branch=master)](https://travis-ci.org/spring-projects/spring-petclinic/)
-Deploy this sample application to Pivotal Web Services:
-
-<a href="https://push-to.cfapps.io?repo=https%3A%2F%2Fgithub.com%2Fspring-projects%2Fspring-petclinic.git">
-    <img src="https://push-to.cfapps.io/ui/assets/images/Push-to-Pivotal-Light-with-Shadow.svg" width="180" alt="Push" align="center">
-</a>
+# Spring PetClinic Sample Application
+Changes added in this fork:
+- Maven profiles to build 'war' for deployment on external tomcat (See [pom.xml](./pom.xml))
 
 ## Understanding the Spring Petclinic application with a few diagrams
 <a href="https://speakerdeck.com/michaelisvy/spring-petclinic-sample-application">See the presentation here</a>
@@ -27,6 +24,11 @@ Or you can run it from Maven directly using the Spring Boot Maven plugin. If you
 
 ```
 ./mvnw spring-boot:run
+```
+
+## Build a war file to deploy on external tomcat
+```
+./mvnw clean package -Pexternal
 ```
 
 ## In case you find a bug/suggested improvement for Spring Petclinic
@@ -90,7 +92,6 @@ version. Otherwise, run the application by right clicking on the `PetClinicAppli
 4) Navigate to Petclinic
 
 Visit [http://localhost:8080](http://localhost:8080) in your browser.
-
 
 ## Looking for something in particular?
 
