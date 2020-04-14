@@ -1,6 +1,8 @@
 # Spring PetClinic Sample Application
 Changes added in this fork:
 - Maven profiles to build 'war' for deployment on external tomcat (See [pom.xml](./pom.xml))
+- Build docker image with embedded tomcat (See [Dockerfile](./Dockerfile))
+- Build docker image with external tomcat (See [Dockerfile](./Dockerfile-external))
 
 ## Understanding the Spring Petclinic application with a few diagrams
 <a href="https://speakerdeck.com/michaelisvy/spring-petclinic-sample-application">See the presentation here</a>
@@ -92,6 +94,12 @@ version. Otherwise, run the application by right clicking on the `PetClinicAppli
 4) Navigate to Petclinic
 
 Visit [http://localhost:8080](http://localhost:8080) in your browser.
+
+## Build docker image
+### with embedded tomcat
+```docker build . -t sudhirtumati/spring-petclinic```
+### for external tomcat
+```docker build . -t sudhirtumati/spring-petclinic```
 
 ## Looking for something in particular?
 

@@ -1,0 +1,5 @@
+# External tomcat
+FROM sudhirtumati/tomcat_9.0.34:alpine-jre
+ADD target/sp*.war /usr/local/tomcat/webapps/
+EXPOSE 8080
+CMD ["catalina.sh", "run"]
